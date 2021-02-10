@@ -7,13 +7,24 @@
     android:layout_height="wrap_content"
     android:padding="10dp">
 
+    <ImageView
+        android:id="@+id/imgAnimal"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:iconTint="?attr/colorPrimary"
+        android:src="@drawable/ic_cat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
     <TextView
         android:id="@+id/titleName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text = "Name\t\t: "
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/imgAnimal"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
@@ -30,7 +41,8 @@
         android:layout_height="wrap_content"
         android:text = "Type\t\t: "
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/imgAnimal"
         app:layout_constraintTop_toBottomOf="@id/titleName"/>
 
     <TextView
@@ -63,7 +75,8 @@
         android:layout_height="wrap_content"
         android:text = "Room\t\t: "
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/imgAnimal"
         app:layout_constraintTop_toBottomOf="@id/titleAnimal"/>
 
     <TextView
@@ -75,6 +88,7 @@
         app:layout_constraintTop_toBottomOf="@id/animalPet"/>
 
     <Button
+        android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:backgroundTint="@color/red"
