@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Name\t\t: "
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/namePet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kucing Garong"
+        app:layout_constraintStart_toEndOf="@id/titleName"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/titleAnimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Type\t\t: "
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleName"/>
+
+    <TextView
+        android:id="@+id/animalPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kucing"
+        app:layout_constraintStart_toEndOf="@id/titleAnimal"
+        app:layout_constraintTop_toBottomOf="@id/namePet"/>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\t|\t"
+        app:layout_constraintStart_toEndOf="@id/animalPet"
+        app:layout_constraintTop_toBottomOf="@+id/namePet"/>
+
+    <TextView
+        android:id="@+id/typePet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="American Bobtail"
+        app:layout_constraintStart_toEndOf="@id/line"
+        app:layout_constraintTop_toBottomOf="@id/namePet"/>
+
+    <TextView
+        android:id="@+id/titleRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Room\t\t: "
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleAnimal"/>
+
+    <TextView
+        android:id="@+id/roomPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Melati"
+        app:layout_constraintStart_toEndOf="@id/titleRoom"
+        app:layout_constraintTop_toBottomOf="@id/animalPet"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/red"
+        app:iconTint="@color/white"
+        android:text=""
+        app:icon="@drawable/ic_baseline_delete_outline_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
