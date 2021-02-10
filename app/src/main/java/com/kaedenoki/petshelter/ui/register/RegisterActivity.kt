@@ -31,17 +31,21 @@ class RegisterActivity : AppCompatActivity() {
 
             (editText as AutoCompleteTextView).setOnItemClickListener { _, view, _, _ ->
                 this@RegisterActivity.hideKeyboard(view)
-
                 animal = (editText as AutoCompleteTextView).text.toString()
                 type = selectDropdown(animal)
                 Log.d(TAG, "onCreate: $animal")
             }
         }
 
+        binding.apply {
+            btnCancel.setOnClickListener { finish() }
+            btnBack.setOnClickListener { finish() }
+        }
     }
 
     private fun selectDropdown(animal: String) = with(binding) {
         Log.d(TAG, "onCreateAfter: $animal")
+
         var type = ""
         when (animal) {
             "Cat" -> {
@@ -54,11 +58,11 @@ class RegisterActivity : AppCompatActivity() {
                         }
                         Log.d(TAG, "selectDropdown: $item")
                         tfType.apply {
+                            (editText as AutoCompleteTextView).setText("")
                             val adapter = ArrayAdapter(tfType.context, R.layout.item_dropdown, item)
                             (tfType.editText as? AutoCompleteTextView)?.setAdapter(adapter)
                             (editText as AutoCompleteTextView).setOnItemClickListener { _, view, _, _ ->
                                 this@RegisterActivity.hideKeyboard(view)
-
                                 type = (editText as AutoCompleteTextView).text.toString()
                                 Log.d(TAG, "onCreate: $animal")
                             }
@@ -76,6 +80,7 @@ class RegisterActivity : AppCompatActivity() {
                         }
                         Log.d(TAG, "selectDropdown: $item")
                         tfType.apply {
+                            (editText as AutoCompleteTextView).setText("")
                             val adapter = ArrayAdapter(tfType.context, R.layout.item_dropdown, item)
                             (tfType.editText as? AutoCompleteTextView)?.setAdapter(adapter)
                             (editText as AutoCompleteTextView).setOnItemClickListener { _, view, _, _ ->
