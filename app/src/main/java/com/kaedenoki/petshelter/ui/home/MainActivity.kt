@@ -1,7 +1,8 @@
-package com.kaedenoki.petshelter
+package com.kaedenoki.petshelter.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kaedenoki.petshelter.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
