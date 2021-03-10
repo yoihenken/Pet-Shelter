@@ -17,14 +17,25 @@ object Helpers {
     fun List<DataSave>.toDataSaveForHolder() : MutableList<Any> {
         val saveCat = mutableListOf<Any>()
         val saveDog = mutableListOf<Any>()
-        saveCat.add("Cat")
-        saveDog.add("Dog")
+        var checkCatHeader = false
+        var checkDogHeader = false
+
+        if (this.isEmpty()) saveCat.add("Data Empty")
+
         this.forEach {
             when(it.animal.toString()){
                 "Cat" -> {
+                    if (!checkCatHeader){
+                        checkCatHeader = true
+                        saveCat.add("Cat")
+                    }
                    saveCat.add(it)
                 }
                 "Dog" -> {
+                    if (!checkDogHeader){
+                        checkDogHeader = true
+                        saveDog.add("Dog")
+                    }
                     saveDog.add(it)
                 }
             }
