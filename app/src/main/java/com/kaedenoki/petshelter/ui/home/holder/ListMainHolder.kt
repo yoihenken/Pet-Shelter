@@ -2,12 +2,14 @@ package com.kaedenoki.petshelter.ui.home.holder
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.kaedenoki.petshelter.R
 import com.kaedenoki.petshelter.databinding.ItemListBinding
 import com.kaedenoki.petshelter.model.DataSave
+import com.kaedenoki.petshelter.ui.details.DetailActivity
 import com.kaedenoki.petshelter.ui.home.MainViewModel
 
 class ListMainHolder( itemView : View) : RecyclerView.ViewHolder(itemView) {
@@ -31,6 +33,11 @@ class ListMainHolder( itemView : View) : RecyclerView.ViewHolder(itemView) {
 
         btnDelete.setOnClickListener {
             model.removeData((context as Activity).application, data)
+        }
+        itemView.setOnClickListener{
+            context.startActivity(Intent(context, DetailActivity::class.java).apply {
+                putExtra(DetailActivity.EXTRA_DATASAVE, data)
+            })
         }
     }
 
