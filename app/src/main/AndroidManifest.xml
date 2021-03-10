@@ -11,15 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetShelter">
-        <activity android:name=".ui.details.DetailActivity"></activity>
-        <activity android:name=".ui.register.RegisterActivity" />
-        <activity android:name=".ui.home.MainActivity">
+        <activity android:name=".ui.splashscreen.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.details.DetailActivity" />
+        <activity android:name=".ui.register.RegisterActivity" />
+        <activity android:name=".ui.home.MainActivity"/>
     </application>
 
 </manifest>
