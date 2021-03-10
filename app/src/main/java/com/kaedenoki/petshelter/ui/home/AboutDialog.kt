@@ -28,7 +28,7 @@ class AboutDialog (var activity: Activity) {
         alertDialog = builder.create()
         alertDialog.setView(binding.root, 50, 50, 50, 50)
         alertDialog.show()
-        alertDialog.window?.setLayout(800,800)
+        alertDialog.window?.setLayout(800,850)
 //        Log.d("AboutDialog", "startDialog: ${binding.dialogAbout.measuredWidth}")
 //        Log.d("AboutDialog", "startDialog: ${binding.dialogAbout.width}")
 //        Log.d("AboutDialog", "startDialog: ${binding.dialogAbout.maxWidth}")
