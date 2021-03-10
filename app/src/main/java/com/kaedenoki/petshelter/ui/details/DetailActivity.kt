@@ -27,6 +27,7 @@ class DetailActivity : AppCompatActivity() {
                     finish()
                 }
             }
+            idPetContent.text = dataSave.id.toString()
             namePet.text = dataSave.name
             nameAnimalContent.text = dataSave.animal
             typeAnimalContent.text = dataSave.type
